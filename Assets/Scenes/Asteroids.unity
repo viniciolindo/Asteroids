@@ -533,8 +533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc80bf55ed314621b96c0095d19878c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustSpeed: 5
+  forwardSpeed: 5
   turnSpeed: 200
+  bulletPrefab: {fileID: 8241675858300956292, guid: 3f96cd03604bf4806872c65536cc11d9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Impostazioni Movimento")]
-    public float thrustSpeed = 5.0f;   // La potenza del motore
+    public float forwardSpeed = 5.0f;   // La potenza del motore
     public float turnSpeed = 200.0f;   // La velocità di rotazione in gradi al secondo
 
     private Rigidbody2D rb;
-    private float thrustInput;
+    private float forwardInput;
     private float turnInput;
+
+    public GameObject bulletPrefab; // Prefab del proiettile da sparare
 
     void Awake()
     {
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // "Vertical" mappa W/S o Freccia Su/Giù
-        thrustInput = Input.GetAxis("Vertical"); 
+        forwardInput = Input.GetAxis("Vertical"); 
 
         // "Horizontal" mappa A/D o Freccia Sinistra/Destra
         turnInput = Input.GetAxis("Horizontal"); 
@@ -30,8 +32,19 @@ public class PlayerController : MonoBehaviour
         {
             TeleportRandomly();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+           Shoot();
+        }
     }
 
+
+    void Shoot()
+    {
+        // Implementa qui la logica di sparo
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Debug.Log("Sparo!");
+    }
     // FixedUpdate viene chiamato a intervalli fissi di tempo: QUI applichiamo la fisica
     void FixedUpdate()
     {
@@ -48,10 +61,10 @@ public class PlayerController : MonoBehaviour
         // 2. Gestione Spinta (Thrust)
         // Applichiamo forza solo se il giocatore preme "Avanti" (W o Freccia Su)
         // In Asteroids non esiste la retromarcia!
-        if (thrustInput > 0)
+        if (forwardInput > 0)
         {
             // transform.up è la direzione "davanti" della navicella (la punta del triangolo)
-            rb.AddForce(transform.up * thrustSpeed * thrustInput);
+            rb.AddForce(transform.up * forwardSpeed * forwardInput);
         }
        
     }
@@ -78,4 +91,6 @@ public class PlayerController : MonoBehaviour
         // In molti giochi, il teletrasporto ti ferma anche. Se vuoi farlo, togli il commento sotto:
         // rb.velocity = Vector2.zero;
     }
+
+    
 }
