@@ -536,6 +536,70 @@ MonoBehaviour:
   forwardSpeed: 5
   turnSpeed: 200
   bulletPrefab: {fileID: 8241675858300956292, guid: 3f96cd03604bf4806872c65536cc11d9, type: 3}
+--- !u!1 &1871916585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871916587}
+  - component: {fileID: 1871916588}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1871916587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871916585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0521284, y: 0.030102924, z: 0.07458833}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1871916588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871916585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefc3aa62ebdd4bb487e752e555be7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigAsteroidsPrefab:
+  - {fileID: 3955418798240587005, guid: e96147eef2a084ab0945a47c09216cf4, type: 3}
+  - {fileID: 6542101368399430838, guid: f09ed7c84a3f6417e8fa3c636c043fae, type: 3}
+  - {fileID: 122214560388886015, guid: 6959fef424e9548b3a8296143caf4f08, type: 3}
+  - {fileID: 1416072628507055035, guid: 9639178e86e5d4397aa3d41f3987cf4a, type: 3}
+  mediumAsteroidPrefab:
+  - {fileID: 6747026704579016348, guid: 3abc635be567745e2b5015503c2a1367, type: 3}
+  - {fileID: 3592861495988656133, guid: 54a3d13867ee94ef19905dd926379816, type: 3}
+  - {fileID: 6554404179560890419, guid: 702ed0532312b4f1d96b22a84407c115, type: 3}
+  - {fileID: 7979792204202706108, guid: 012b273953d1e446cbf6c15afdd64c36, type: 3}
+  - {fileID: 1082700227081861820, guid: bc690e74ddaeb4acba17d0d08429a747, type: 3}
+  smallAsteroidPrefab:
+  - {fileID: 1273717868519207366, guid: 06196c5591f1d46fc9d1783dd4526e16, type: 3}
+  - {fileID: 172733410043596393, guid: 79b0b1dd76896488aa322661872f6880, type: 3}
+  - {fileID: 1829189280640820382, guid: 448f2339bd2af4cf68f4ed441c89a137, type: 3}
+  - {fileID: 8266873878386540212, guid: d2ab2568483ee45f59681877b055dc9e, type: 3}
+  - {fileID: 1187051454626278293, guid: 0758f2f1aecde4beebf492578f6ab275, type: 3}
+  - {fileID: 72295631480350893, guid: 7ea2cc22e17934fb38279f7d0d4f5720, type: 3}
+  initialAsteroidCount: 5
+  spawnRadius: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -543,3 +607,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1407061780}
+  - {fileID: 1871916587}
